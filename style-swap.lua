@@ -80,7 +80,7 @@ if not opt.cpu then
     cutorch.setDevice(opt.gpu+1)
 end
 
-vgg = loadcaffe.load('models/VGG_ILSVRC_19_layers_deploy.prototxt', 'models/VGG_ILSVRC_19_layers.caffemodel', 'nn')
+vgg = loadcaffe.load('/shared/foss-18/style-swap/models/VGG_ILSVRC_19_layers_deploy.prototxt', '/shared/foss-18/style-swap/models/VGG_ILSVRC_19_layers.caffemodel', 'nn')
 for i=46,37,-1 do
     vgg:remove(i)
 end
